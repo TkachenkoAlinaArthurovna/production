@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: red;
+  font-size: 2vw;
+}
+.text {
+  width: 50vw;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  width: 40vw;
+  text-align: center;
+  font-size: max(14px, 2vw);
+}
+svg {
+  width: 30vw;
+  height: auto;
+}

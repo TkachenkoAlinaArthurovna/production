@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./animation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="500"
+        height="600"
+        viewBox="0 0 500 600"
+        role="img"
+        aria-labelledby="title desc"
+      >
+        <title id="title">Скелетик танцює по-новому</title>
+        <desc id="desc">
+          Скелетик піднімає обидві руки та по черзі піднімає ноги.
+        </desc>
+        <style>
+          .bone {
+            fill: none;
+            stroke: #f9f5df;
+            stroke-width: 15;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .thin {
+            stroke-width: 8;
+          }
+          .left-arm {
+            transform-origin: 195px 220px;
+            animation: armLeft 1.6s ease-in-out infinite;
+          }
+          .right-arm {
+            transform-origin: 305px 220px;
+            animation: armRight 1.6s ease-in-out infinite;
+          }
+          .left-leg {
+            transform-origin: 224px 365px;
+            animation: legLeft 1.6s ease-in-out infinite;
+          }
+          .right-leg {
+            transform-origin: 276px 365px;
+            animation: legRight 1.6s ease-in-out infinite;
+          }
+          .dancer {
+            animation: bounce 1.6s ease-in-out infinite;
+          }
+          @keyframes armLeft {
+            0%,
+            100% {
+              transform: rotate(0deg);
+            }
+            50% {
+              transform: rotate(100deg);
+            }
+          }
+          @keyframes armRight {
+            0%,
+            100% {
+              transform: rotate(0deg);
+            }
+            50% {
+              transform: rotate(-100deg);
+            }
+          }
+          @keyframes legLeft {
+            0%,
+            50%,
+            100% {
+              transform: rotate(0deg);
+            }
+            25% {
+              transform: rotate(40deg);
+            }
+          }
+          @keyframes legRight {
+            0%,
+            50%,
+            100% {
+              transform: rotate(0deg);
+            }
+            75% {
+              transform: rotate(-40deg);
+            }
+          }
+          @keyframes bounce {
+            0%,
+            50%,
+            100% {
+              transform: translateY(0);
+            }
+            25%,
+            75% {
+              transform: translateY(-8px);
+            }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .dancer,
+            .left-arm,
+            .right-arm,
+            .left-leg,
+            .right-leg {
+              animation: none;
+            }
+          }
+        </style>
+        <!-- Прозорий фон. Кожна кінцівка має власну точку обертання. -->
+        <g class="dancer">
+          <g class="left-leg bone">
+            <path d="M224 365L205 435L211 506" />
+            <path class="thin" d="M220 442L226 501" />
+            <path d="M211 510L185 522L166 522" />
+          </g>
+          <g class="right-leg bone">
+            <path d="M276 365L295 435L289 506" />
+            <path class="thin" d="M280 442L274 501" />
+            <path d="M289 510L315 522L334 522" />
+          </g>
+          <g class="left-arm bone">
+            <path d="M195 220L147 267L119 218" />
+            <path class="thin" d="M155 258L131 211" />
+            <path
+              class="thin"
+              d="M120 218L105 196M120 218L119 190M120 218L133 195"
+            />
+          </g>
+          <g class="right-arm bone">
+            <path d="M305 220L353 267L381 218" />
+            <path class="thin" d="M345 258L369 211" />
+            <path
+              class="thin"
+              d="M380 218L395 196M380 218L381 190M380 218L367 195"
+            />
+          </g>
+          <g class="bone">
+            <path d="M250 192V341" />
+            <path d="M195 220Q222 205 250 218Q278 205 305 220" />
+            <path
+              class="thin"
+              d="M242 235Q192 222 202 247Q216 259 242 252M258 235Q308 222 298 247Q284 259 258 252"
+            />
+            <path
+              class="thin"
+              d="M242 263Q192 250 205 277Q218 289 242 280M258 263Q308 250 295 277Q282 289 258 280"
+            />
+            <path
+              class="thin"
+              d="M242 290Q204 279 215 303Q227 315 242 308M258 290Q296 279 285 303Q273 315 258 308"
+            />
+            <path d="M216 341Q250 358 284 341L276 365Q250 379 224 365Z" />
+          </g>
+          <path
+            fill="#f9f5df"
+            stroke="#d6cfb7"
+            stroke-width="3"
+            d="M191 135C181 84 205 60 250 60S319 84 309 135Q305 154 285 160L283 180Q250 196 217 180L215 160Q195 154 191 135Z"
+          />
+          <ellipse cx="224" cy="121" rx="17" ry="21" fill="#24273b" />
+          <ellipse cx="276" cy="121" rx="17" ry="21" fill="#24273b" />
+          <path d="M250 139L241 151H259Z" fill="#24273b" />
+          <path
+            d="M223 166Q250 180 277 166M236 168V178M250 171V181M264 168V178"
+            fill="none"
+            stroke="#24273b"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
+
+      <h1>Happy Halloween!!!</h1>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="500"
+        height="600"
+        viewBox="0 0 500 600"
+        role="img"
+        aria-labelledby="title desc"
+      >
+        <title id="title">Скелетик танцює по-новому</title>
+        <desc id="desc">
+          Скелетик піднімає обидві руки та по черзі піднімає ноги.
+        </desc>
+        <style>
+          .bone {
+            fill: none;
+            stroke: #f9f5df;
+            stroke-width: 15;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .thin {
+            stroke-width: 8;
+          }
+          .left-arm {
+            transform-origin: 195px 220px;
+            animation: armLeft 1.6s ease-in-out infinite;
+          }
+          .right-arm {
+            transform-origin: 305px 220px;
+            animation: armRight 1.6s ease-in-out infinite;
+          }
+          .left-leg {
+            transform-origin: 224px 365px;
+            animation: legLeft 1.6s ease-in-out infinite;
+          }
+          .right-leg {
+            transform-origin: 276px 365px;
+            animation: legRight 1.6s ease-in-out infinite;
+          }
+          .dancer {
+            animation: bounce 1.6s ease-in-out infinite;
+          }
+          @keyframes armLeft {
+            0%,
+            100% {
+              transform: rotate(0deg);
+            }
+            50% {
+              transform: rotate(100deg);
+            }
+          }
+          @keyframes armRight {
+            0%,
+            100% {
+              transform: rotate(0deg);
+            }
+            50% {
+              transform: rotate(-100deg);
+            }
+          }
+          @keyframes legLeft {
+            0%,
+            50%,
+            100% {
+              transform: rotate(0deg);
+            }
+            25% {
+              transform: rotate(40deg);
+            }
+          }
+          @keyframes legRight {
+            0%,
+            50%,
+            100% {
+              transform: rotate(0deg);
+            }
+            75% {
+              transform: rotate(-40deg);
+            }
+          }
+          @keyframes bounce {
+            0%,
+            50%,
+            100% {
+              transform: translateY(0);
+            }
+            25%,
+            75% {
+              transform: translateY(-8px);
+            }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .dancer,
+            .left-arm,
+            .right-arm,
+            .left-leg,
+            .right-leg {
+              animation: none;
+            }
+          }
+        </style>
+        <!-- Прозорий фон. Кожна кінцівка має власну точку обертання. -->
+        <g class="dancer">
+          <g class="left-leg bone">
+            <path d="M224 365L205 435L211 506" />
+            <path class="thin" d="M220 442L226 501" />
+            <path d="M211 510L185 522L166 522" />
+          </g>
+          <g class="right-leg bone">
+            <path d="M276 365L295 435L289 506" />
+            <path class="thin" d="M280 442L274 501" />
+            <path d="M289 510L315 522L334 522" />
+          </g>
+          <g class="left-arm bone">
+            <path d="M195 220L147 267L119 218" />
+            <path class="thin" d="M155 258L131 211" />
+            <path
+              class="thin"
+              d="M120 218L105 196M120 218L119 190M120 218L133 195"
+            />
+          </g>
+          <g class="right-arm bone">
+            <path d="M305 220L353 267L381 218" />
+            <path class="thin" d="M345 258L369 211" />
+            <path
+              class="thin"
+              d="M380 218L395 196M380 218L381 190M380 218L367 195"
+            />
+          </g>
+          <g class="bone">
+            <path d="M250 192V341" />
+            <path d="M195 220Q222 205 250 218Q278 205 305 220" />
+            <path
+              class="thin"
+              d="M242 235Q192 222 202 247Q216 259 242 252M258 235Q308 222 298 247Q284 259 258 252"
+            />
+            <path
+              class="thin"
+              d="M242 263Q192 250 205 277Q218 289 242 280M258 263Q308 250 295 277Q282 289 258 280"
+            />
+            <path
+              class="thin"
+              d="M242 290Q204 279 215 303Q227 315 242 308M258 290Q296 279 285 303Q273 315 258 308"
+            />
+            <path d="M216 341Q250 358 284 341L276 365Q250 379 224 365Z" />
+          </g>
+          <path
+            fill="#f9f5df"
+            stroke="#d6cfb7"
+            stroke-width="3"
+            d="M191 135C181 84 205 60 250 60S319 84 309 135Q305 154 285 160L283 180Q250 196 217 180L215 160Q195 154 191 135Z"
+          />
+          <ellipse cx="224" cy="121" rx="17" ry="21" fill="#24273b" />
+          <ellipse cx="276" cy="121" rx="17" ry="21" fill="#24273b" />
+          <path d="M250 139L241 151H259Z" fill="#24273b" />
+          <path
+            d="M223 166Q250 180 277 166M236 168V178M250 171V181M264 168V178"
+            fill="none"
+            stroke="#24273b"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
+    </div>
+    <p class="text">
+      Halloween will come tonight: Don’t be frightened — it’s all right To see
+      witches in the air — They wish luck and do not scare!
+    </p>
+  </body>
+</html>

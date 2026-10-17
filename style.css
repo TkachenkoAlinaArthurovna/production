@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 5.2vw;
+}
+main {
+  position: fixed;
+  z-index: 2;
+  top: 19.53vh;
+  display: block;
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 0 5.2vw;
+}
+
+.logo {
+  width: 196px;
+  height: 54px;
+}
+
+header ul {
+  display: flex;
+  gap: 3.125vw;
+  list-style: none;
+}
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+header li {
+  font-size: 17px;
+  font-weight: 700;
+}
+.menu {
+  width: 50%;
+}
+
+@media (max-width: 1350px) {
+  .menu {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+  }
+  .menu.active {
+    transform: translateX(0);
+  }
+}
+.background {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.subtitle {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: max-content;
+  margin-bottom: 24px;
+  padding: 14px 46px 14px 16px;
+  border-radius: 3px;
+  border: 1px solid #86c96e;
+  background-color: #f3ffe9;
+}
+.subtitle span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #58b83e;
+}
+.title {
+  margin-bottom: 8vh;
+  font-size: 4vw;
+}
+.title span {
+  color: #42a934;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+}
+.right img {
+  width: 43vw;
+}
+.work {
+  display: flex;
+  gap: 30px;
+}
+.work span {
+  padding: 13px;
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.work span:nth-child(1) {
+  background-color: #f0602b;
+}
+.work span:nth-child(2) {
+  background-color: #287bd2;
+}
+.work span:nth-child(3) {
+  background-color: #ffd43b;
+  color: #27332a;
+}
+.figma {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+#menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  #menu {
+    display: block;
+  }
+}
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
